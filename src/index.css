@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+    /* custom font */
+    --font-inter: "Inter", sans-serif;
+
+    /* custom bg color */
+    --color-custom-bg-black: #070809;
+    --color-custom-bg-btn: #373ffb;
+
+    /* custom font color */
+    --color-custom-text-primary: #bcc6d0;
+    --color-custom-text-white: #ffffff;
+
+    /* custom shadow */
+    --shadow-blueBtnShadow: 0 0 4px 8px #373dfb6f;
+
+    /* custom border */
+    --color-border-gray: #2f2f2f;
+}
+
+@layer components {
+    .container {
+        @apply w-full max-w-[1440px] mx-auto px-8 sm:px-10 md:px-16 lg:px-[130px];
+    }
+
+    .menu-center {
+        @apply w-full max-w-[1440px] mx-auto mt-10;
+    }
+}
+
+* {
+    font-family: var(--font-inter);
+    /* border: 1px solid red; */
+    /* color: #373dfb6f; */
+}
