@@ -11,3 +11,21 @@ const BlueButton = () => {
 };
 
 export default BlueButton;
+
+/* 
+
+ul 
+className="hidden md:flex items-center gap-6"
+
+li 
+    className=" "
+
+download btn
+className="hidden md:block"
+
+  
+
+
+  
+
+*/

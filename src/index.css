@@ -13,9 +13,7 @@
     /* custom font color */
     --color-custom-text-primary: #bcc6d0;
     --color-custom-text-white: #ffffff;
-
-    /* custom shadow */
-    --shadow-blueBtnShadow: 0 0 4px 8px #373dfb6f;
+    --color-custom-marquee-text: #595f65;
 
     /* custom border */
     --color-border-gray: #2f2f2f;
@@ -25,14 +23,26 @@
     .container {
         @apply w-full max-w-[1440px] mx-auto px-8 sm:px-10 md:px-16 lg:px-[130px];
     }
+}
 
-    .menu-center {
-        @apply w-full max-w-[1440px] mx-auto mt-10;
+@layer utilities {
+    .bg-radial-glow {
+        background: radial-gradient(
+            at 50% 5%,
+            rgb(255 255 255 / 0.05),
+            rgb(255 255 255 / 0) 80%
+        );
     }
 }
 
+html {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply font-inter bg-custom-bg-black text-custom-text-white;
+}
+
 * {
-    font-family: var(--font-inter);
-    /* border: 1px solid red; */
-    /* color: #373dfb6f; */
+    border: 1px solid red;
 }

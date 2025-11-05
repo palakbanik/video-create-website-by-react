@@ -13,27 +13,23 @@ const navLinks = [
     { id: 4, title: "Pricing", link: "/" },
 ];
 
-const menu = "Menu";
-const close = "Close";
-
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
-        <header className="w-full fixed top-0 left-0 z-50 ">
-            {/* desktop view */}
-            <nav className="max-w-[1440px] flex items-center justify-between mx-8 md:mx-10 mt-10 bg-custom-bg-black text-custom-text-primary rounded-full sticky top-0 left-0">
+        <header className="w-full max-w-[1440px] mx-auto px-10 bg-black/30 backdrop-blur-md fixed top-10 left-0 right-0 z-50">
+            <nav className="flex items-center justify-between">
                 {/* logo */}
                 <a href="/">
                     <img src={logo} alt="logo" draggable="false" />
                 </a>
 
                 {/* nav links */}
-                <ul className="hidden md:flex items-center gap-6 ">
+                <ul className="hidden md:flex items-center gap-6">
                     {navLinks.map((link, idx) => (
                         <li
                             key={idx}
-                            className="font-normal text-sm capitalize leading-none tracking-[-0.04em] transition-all duration-300 cursor-pointer hover:text-custom-bg-btn"
+                            className="font-normal text-sm capitalize leading-none tracking-[-0.04em] transition-all duration-300 cursor-pointer hover:scale-110 hover:text-shadow-2xs hover:text-shadow-custom-bg-btn"
                         >
                             <a key={link.id} href={link.link}>
                                 {link.title}
@@ -42,11 +38,12 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                {/* download button */}
+                {/* download btn */}
                 <div className="hidden md:block">
                     <BlueButton />
                 </div>
 
+                {/* menu icon */}
                 <button
                     className="md:hidden"
                     onClick={() => setShowMenu(!showMenu)}
@@ -59,10 +56,29 @@ const Navbar = () => {
                 </button>
             </nav>
 
-            {/* mobile view */}
-            <nav></nav>
+            <div className="md:hidden w-full relative z-50">
+                <nav
+                    className={`w-full absolute top-0 ${
+                        showMenu ? "right-0" : "-right-[200%]"
+                    } duration-400 ease-in`}
+                >
+                    <ul className="flex flex-col items-center justify-center gap-5 sm:gap-8 py-10 sm:py-20 mt-5 border border-custom-text-primary rounded-3xl bg-black backdrop-blur-3xl">
+                        {navLinks.map((link, idx) => (
+                            <li
+                                key={idx}
+                                className="text-base font-normal capitalize"
+                                onClick={() => setShowMenu(false)}
+                            >
+                                <a href={link.link}>{link.title}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
         </header>
     );
 };
 
 export default Navbar;
+
+//  flex items-center justify-between mx-8 md:mx-10 mt-10 rounded-full
