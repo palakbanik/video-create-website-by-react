@@ -25,7 +25,7 @@
 
 @layer components {
     .container {
-        @apply w-full max-w-[1440px] mx-auto;
+        @apply w-full max-w-[1440px] mx-auto sm:px-10 md:px-16 lg:px-[130px];
     }
 }
 

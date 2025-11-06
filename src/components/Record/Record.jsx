@@ -20,8 +20,8 @@ const content = [
 
 const Record = () => {
     return (
-        <section className="w-full py-32 sm:py-36 md:py-[220px] container">
-            <div className="flex flex-col items-center gap-32 md:gap-[220px]">
+        <section className="w-full container">
+            <div className="flex flex-col items-center">
                 {content.map((item, idx) => (
                     <div
                         key={idx}
@@ -30,13 +30,9 @@ const Record = () => {
                         } ${item.id === 2 ? "md:flex-row-reverse" : ""}`}
                     >
                         {/* image content */}
-                        <img
-                            src={item.image}
-                            alt="record"
-                            className="flex items-center md:place-start -mt-23"
-                        />
+                        <img src={item.image} alt="record" />
                         {/* text content */}
-                        <div className="w-full max-w-[536px] flex flex-col items-start gap-10 px-8 md:-mt-23">
+                        <div className="w-full max-w-[536px] flex flex-col items-start gap-10 px-8 md:px-0">
                             <div
                                 className={`w-6 h-6 border-5 rounded-full ${
                                     item.id === 1

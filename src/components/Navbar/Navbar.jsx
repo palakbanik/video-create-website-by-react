@@ -17,7 +17,7 @@ const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     return (
-        <header className="w-full max-w-[1440px] mx-auto px-10 bg-black/30 backdrop-blur-md fixed top-10 left-0 right-0 z-50">
+        <header className="w-full max-w-[1440px] mx-auto px-8 md:px-10 bg-custom-bg-black/30 backdrop-blur-md fixed top-10 left-0 right-0 z-50">
             <nav className="flex items-center justify-between">
                 {/* logo */}
                 <a href="/">

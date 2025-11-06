@@ -26,7 +26,7 @@ const logos = [
 
 const Marquee = () => {
     return (
-        <section>
+        <section className="w-full">
             <div className="flex flex-col items-center gap-[72px] md:gap-[77px]">
                 {/* text content */}
                 <div className="flex flex-col items-center gap-6 md:gap-8 px-8">
