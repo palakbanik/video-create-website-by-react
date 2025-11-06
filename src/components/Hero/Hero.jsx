@@ -7,7 +7,7 @@ const Hero = () => {
         <section className="w-full h-auto mt-[154px] md:mt-52">
             <div className="container flex flex-col items-center justify-center">
                 {/* text content */}
-                <div className="w-full flex flex-col items-center text-center gap-6 md:gap-8 md:mb-16">
+                <div className="w-full max-w-[366px] sm:max-w-[919px] flex flex-col items-center text-center gap-6 md:gap-8 md:mb-16">
                     <h1 className="font-light text-[40px] sm:text-[60px] md:text-[70px] lg:text-[96px] text-custom-text-white leading-none tracking-[-0.04em]">
                         One video is worth a <br /> thousand words
                     </h1>
