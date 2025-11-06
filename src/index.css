@@ -9,14 +9,18 @@
     /* custom bg color */
     --color-custom-bg-black: #070809;
     --color-custom-bg-btn: #373ffb;
+    --color-custom-bg: #ff437b;
 
     /* custom font color */
     --color-custom-text-primary: #bcc6d0;
     --color-custom-text-white: #ffffff;
     --color-custom-marquee-text: #595f65;
 
-    /* custom border */
+    /* custom border color */
     --color-border-gray: #2f2f2f;
+
+    /* custom radial gradient color */
+    --color-custom-radial-gradient: #14171a;
 }
 
 @layer components {
@@ -43,6 +47,6 @@ body {
     @apply font-inter bg-custom-bg-black text-custom-text-white;
 }
 
-* {
+/* * {
     border: 1px solid red;
-}
+} */

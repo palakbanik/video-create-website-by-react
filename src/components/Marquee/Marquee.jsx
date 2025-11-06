@@ -1,4 +1,5 @@
 import React from "react";
+import "./Marquee.css";
 import HeadingBtnText from "../smallComponents/HeadingBtnText/HeadingBtnText";
 import HeadingText from "../smallComponents/HeadingText/HeadingText";
 
@@ -45,7 +46,7 @@ const Marquee = () => {
                 </div>
 
                 {/* marquee content */}
-                <div className="w-full bg-custom-bg-black">
+                <div className="w-full bg-custom-bg-black overflow-hidden">
                     {/* Main Container */}
                     <div className="relative">
                         {/* Gradient Overlays - Paser dui side e fade effect */}
@@ -53,56 +54,42 @@ const Marquee = () => {
                         <div className="absolute right-0 top-0 bottom-0 w-32 md:w-[460px] bg-linear-to-l from-custom-bg-black to-custom-bg-black/0 z-10"></div>
 
                         {/* Scrolling Container */}
-                        <div className="flex flex-col gap-14 animate-scroll">
+                        <div className="flex flex-col gap-14 items-center ">
                             {/* First Set of Logos */}
-                            <div className="flex gap-16 px-8">
+                            <div className="flex gap-16 px-8 animate-scroll-right">
                                 {logos.map((logo, idx) => (
                                     <div
                                         key={idx}
-                                        className="flex items-center text-custom-marquee-text"
+                                        className="flex items-center text-custom-marquee-text shrink-0 "
                                     >
-                                        <img src={logo.image} alt="logo" />
+                                        <img
+                                            src={logo.image}
+                                            alt="logo"
+                                            height={200}
+                                            draggable="false"
+                                        />
                                     </div>
                                 ))}
                             </div>
 
                             {/* second set of logos */}
-                            <div className="flex gap-16 px-8">
+                            <div className="flex gap-16 px-8 animate-scroll-left">
                                 {logos.map((logo, idx) => (
                                     <div
                                         key={idx}
-                                        className="flex items-center text-custom-marquee-text"
+                                        className="flex items-center text-custom-marquee-text shrink-0 "
                                     >
-                                        <img src={logo.image} alt="logo" />
+                                        <img
+                                            src={logo.image}
+                                            alt="logo"
+                                            height={200}
+                                            draggable="false"
+                                        />
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </div>
-
-                    {/* Custom CSS Animation */}
-                    <style>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          50% {
-            transform: translateX(-50%);
-          }
-          100% {
-                transform: translateX(-100%)
-          }
-        }
-        
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
-        }
-        
-        /* Hover korle pause hobe */
-        .animate-scroll:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
                 </div>
             </div>
         </section>
