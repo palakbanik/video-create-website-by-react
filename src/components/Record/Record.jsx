@@ -24,7 +24,10 @@ const Record = () => {
             <div className=" flex flex-col items-center">
                 {/* first content */}
                 {content.map((item, idx) => (
-                    <div className="w-full max-w-[1180px] flex flex-col md:flex-row items-start justify-center">
+                    <div
+                        key={idx}
+                        className="w-full max-w-[1180px] flex flex-col md:flex-row items-start justify-center"
+                    >
                         {/* image content */}
                         <div>
                             <img src={item.image} alt="record" />
