@@ -2,6 +2,7 @@ import React from "react";
 
 // image
 import record from "../../assets/record-img.png";
+import share from "../../assets/share-img.png";
 
 const content = [
     {
@@ -14,14 +15,14 @@ const content = [
         id: 2,
         heading: " Share with a link",
         para: "You can share your video effortlessly by copying and pasting the link to wherever your recipients are, and they can watch it without the need to log in or create an account.",
-        image: record,
+        image: share,
     },
 ];
 
 const Record = () => {
     return (
-        <section className="w-full container">
-            <div className="flex flex-col items-center">
+        <section className="w-full">
+            <div className="flex flex-col items-center md:mt-[220px] px-8">
                 {content.map((item, idx) => (
                     <div
                         key={idx}
@@ -30,9 +31,10 @@ const Record = () => {
                         } ${item.id === 2 ? "md:flex-row-reverse" : ""}`}
                     >
                         {/* image content */}
-                        <img src={item.image} alt="record" />
+                        <img src={item.image} alt="content" width={500} />
+
                         {/* text content */}
-                        <div className="w-full max-w-[536px] flex flex-col items-start gap-10 px-8 md:px-0">
+                        <div className="w-full max-w-[536px] flex flex-col items-start gap-10 ">
                             <div
                                 className={`w-6 h-6 border-5 rounded-full ${
                                     item.id === 1
@@ -45,7 +47,7 @@ const Record = () => {
                                 <h1
                                     className={`font-light ${
                                         item.id === 1
-                                            ? "text-4xl lg:text-5xl"
+                                            ? "text-4xl md:text-5xl"
                                             : "text-5xl"
                                     } leading-[1.28em] tracking-[-0.04em]`}
                                 >

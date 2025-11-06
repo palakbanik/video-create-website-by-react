@@ -40,7 +40,7 @@ const Navbar = () => {
 
                 {/* download btn */}
                 <div className="hidden md:block">
-                    <BlueButton />
+                    <BlueButton text={"Download Now"} />
                 </div>
 
                 {/* menu icon */}
